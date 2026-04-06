@@ -1,3 +1,22 @@
+CREATE TABLE course (
+	course_id varchar2(10),
+	title varchar2(14) NOT NULL,
+	credit int,
+	CONSTRAINT pk_course PRIMARY key(course_id)
+)
+
+CREATE TABLE professor (
+	prof_id varchar2(10),
+	resident_id varchar2(14) NOT NULL,
+	name varchar2(10) NOT NULL,
+	dept_id varchar2(10),
+	POSITION varchar2(10),
+	year_emp int,
+	CONSTRAINT pk_professor PRIMARY key(prof_id),
+	CONSTRAINT fk_professor foreign key(dept_id)
+		REFERENCES department(dept_id)
+)
+
 CREATE TABLE student (
 	stu_id varchar2(10),
 	resident_id varchar2(14) NOT NULL,
