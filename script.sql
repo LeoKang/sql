@@ -73,7 +73,7 @@ SELECT * FROM tab;
 
 purge recyclebin;
 
--- 2026-04-07 ------------------------------------------
+-- 2026-04-07 -------------------------------------------
 SELECT NAME 이름, POSITION AS 직위, 2026-YEAR_EMP 재직연수
 FROM PROFESSOR
 
